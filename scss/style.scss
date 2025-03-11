@@ -44,12 +44,7 @@ section{
 
     // content
     .theme1{
-        &.fp-auto-height.fp-section{
-            height: 100vh !important;
-            // @media (max-width:960px){
-            //     height: auto !important;
-            // }
-        }
+        height: auto;
         position: relative;
         display: flex;
         align-items: center;
@@ -58,9 +53,17 @@ section{
         color: white;
         font-size: 2rem;
         overflow: hidden; /* 確保影片不會溢出 */
+        @media (max-width:800px){
+            padding-top: 80px;
+        }
         .frame_30s{
-            @media (max-width:960px){
-                transform: translateX(-35%);
+            height: 0;
+            padding-bottom: 56.25%;
+            @media (max-width:800px){
+                padding-bottom: 175%;
+            }
+            iframe{
+                padding: 0;
             }
         }
         // .video-container {
@@ -104,14 +107,14 @@ section{
             z-index: 100;
             background: url(../img/theme1_header_bg.jpg) center center no-repeat;
             background-size: cover;
-            // @media (max-width:960px){
-            //     position: static;
-            // }
+            @media (max-width:800px){
+                height: 80px;
+            }
             h1{
                 margin-left: calc(56 / 1920 * 100%);
                 width: calc(306 / 1920 * 100%);
                 @media (max-width:960px){
-                    display: none;
+                    width: calc(306 / 1080 * 100%);
                 }
             }
             nav{
@@ -157,7 +160,7 @@ section{
         .contentbox{
             width: calc(840 / 1920 * 100%);
             position: absolute;
-            top: 36%;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 2;
@@ -365,7 +368,29 @@ section{
         //         }
         //     }
         // }
+        .bgtxt{
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            @media (max-width:960px){
+                padding-bottom: 100%;
+            }
+            .img{
+                position: absolute;
+                top: 0;
+                z-index: 3;
+            }
+            
+        }
         .photo_desc{
+            height: 100vh;
             position: absolute;
             right: 20px;
             bottom: 20px;

@@ -30,7 +30,8 @@
                 <h1>
                     <img src="img/theme1_logo.svg" alt="">
                 </h1>
-                <nav>
+                <!-- 0310修改 選單隱藏 -->
+                <!-- <nav>
                     <ul>
                         <li>
                             <a href="#">
@@ -57,12 +58,16 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
+                <!-- 0310修改 選單隱藏 end -->
             </header>
-            <video class="frame_30s" loop muted autoplay playsinline>
-                <source src="img/fullinone_video.mov" type="video/mp4">
-                    <!-- <source src="img/fullinone_video.webm" width="100%" type="video/webm"> -->
-            </video>
+            <!-- 0310修改 影片位置更改 -->
+            <div class="frame_30s" style="position:relative;">
+                <iframe class="pc" src="https://player.vimeo.com/video/1064261168?autoplay=1&muted=1&loop=1&controls=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; muted; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="富櫻翫"></iframe>
+                <iframe class="mob" src="https://player.vimeo.com/video/1064590646?autoplay=1&muted=1&loop=1&controls=0&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="直式-2"></iframe>            
+            </div>                
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <!-- 0310修改 影片位置更改 end -->
             <div class="contentbox">
                 <div class="title">
                     <img src="img/theme1_title.svg" alt="">
@@ -107,9 +112,6 @@
         </div>
         <div class="section theme theme4" id="section4">
                 <div class="contentbox">
-                    <div class="logo wow fadeInDown" data-wow-duration="2s" data-wow-delay="0.5s">
-                        <img src="img/theme4_logo.svg" alt="">
-                    </div>
                     <div class="title wow fadeInDown" data-wow-duration="2s" data-wow-delay="0.5s">
                         <img src="img/theme4_title.svg" alt="">
                     </div>
@@ -122,13 +124,25 @@
                 </div>
         </div>
         <div class="section theme theme5" id="section5">
-            <div class="bg mob">
+            <!-- <div class="bg mob">
                 <div class="horizontal-inner">
                     <div class="box">
                         <img src="img/theme9_bg_mob.jpg" alt="">
                     </div>
                 </div>
+            </div> -->
+            <!-- 0310新增 -->
+            <div class="bgtxt">
+                <div class="img img_h1 wow fadeInDown"data-wow-duration="2s" data-wow-delay="0.2s">
+                    <img class="pc" src="img/theme5_bgtxt1.png" alt="">
+                    <img class="mob" src="img/theme5_bgtxt1_mob.png" alt="">
+                </div>
+                <div class="img img_h2 wow fadeInDown"data-wow-duration="2s" data-wow-delay="0.5s">
+                    <img class="pc" src="img/theme5_bgtxt2.png" alt="">
+                    <img class="mob" src="img/theme5_bgtxt2_mob.png" alt="">
+                </div>
             </div>
+            <!-- 0310新增 end -->
             <div class="photo_desc">
                 <img src="img/theme5_photo_desc.svg" alt="">
             </div>

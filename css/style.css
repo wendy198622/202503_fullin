@@ -343,6 +343,7 @@ section .theme {
 }
 
 section .theme1 {
+  height: auto;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,15 +361,25 @@ section .theme1 {
   /* 確保影片不會溢出 */
 }
 
-section .theme1.fp-auto-height.fp-section {
-  height: 100vh !important;
+@media (max-width: 800px) {
+  section .theme1 {
+    padding-top: 80px;
+  }
 }
 
-@media (max-width: 960px) {
+section .theme1 .frame_30s {
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+@media (max-width: 800px) {
   section .theme1 .frame_30s {
-    -webkit-transform: translateX(-35%);
-            transform: translateX(-35%);
+    padding-bottom: 175%;
   }
+}
+
+section .theme1 .frame_30s iframe {
+  padding: 0;
 }
 
 section .theme1 header {
@@ -390,6 +401,12 @@ section .theme1 header {
   background-size: cover;
 }
 
+@media (max-width: 800px) {
+  section .theme1 header {
+    height: 80px;
+  }
+}
+
 section .theme1 header h1 {
   margin-left: calc(56 / 1920 * 100%);
   width: calc(306 / 1920 * 100%);
@@ -397,7 +414,7 @@ section .theme1 header h1 {
 
 @media (max-width: 960px) {
   section .theme1 header h1 {
-    display: none;
+    width: calc(306 / 1080 * 100%);
   }
 }
 
@@ -466,7 +483,7 @@ section .theme1 header nav ul li + li {
 section .theme1 .contentbox {
   width: calc(840 / 1920 * 100%);
   position: absolute;
-  top: 36%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -720,7 +737,33 @@ section .theme4 .photo_desc {
   }
 }
 
+section .theme5 .bgtxt {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@media (max-width: 960px) {
+  section .theme5 .bgtxt {
+    padding-bottom: 100%;
+  }
+}
+
+section .theme5 .bgtxt .img {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
 section .theme5 .photo_desc {
+  height: 100vh;
   position: absolute;
   right: 20px;
   bottom: 20px;
